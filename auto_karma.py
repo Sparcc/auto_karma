@@ -6,6 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import sys, getopt
 import os
 import time
+import getpass
 
 driverPaths = {'Chrome': 'C:\Selenium\chromedriver.exe',
 		'Edge': 'C:\Selenium\MicrosoftWebDriver.exe',
@@ -13,8 +14,7 @@ driverPaths = {'Chrome': 'C:\Selenium\chromedriver.exe',
 
 url = 'https://www.hipchat.com/sign_in'
 usr = 'thomas.rea@rxpservices.com'
-f = open('password.txt','r') #read
-passwd = f.read()
+passwd = getpass.getpass('Hipchat password:')
 message = '@anime++++'
 room = {'QA': 'https://rxpservices.hipchat.com/chat/room/4154443',
 	'CCA': 'https://rxpservices.hipchat.com/chat/room/3554226',
