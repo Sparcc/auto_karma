@@ -15,13 +15,13 @@ driverPaths = {'Chrome': 'C:\Selenium\chromedriver.exe',
 url = 'https://www.hipchat.com/sign_in'
 usr = 'thomas.rea@rxpservices.com'
 passwd = getpass.getpass('Hipchat password:')
-message = '@anime++++'
+message = '@anime-'
 room = {'QA': 'https://rxpservices.hipchat.com/chat/room/4154443',
 	'CCA': 'https://rxpservices.hipchat.com/chat/room/3554226',
 	'TEST': 'https://rxpservices.hipchat.com/chat/room/4216688'
 	};
 	
-designatedRoom = room['CCA']
+designatedRoom = room['TEST']
 	
 driver = webdriver.Chrome(driverPaths['Chrome'])
 driver.get(url)
@@ -61,5 +61,5 @@ def enterMessage(driver, xpath, message):
 #enter message
 xpath = '//*[@id="hc-message-input"]'
 
-for x in range(0, 99999999):
+for x in range(0, 133):
 	enterMessage(driver, xpath, message)
